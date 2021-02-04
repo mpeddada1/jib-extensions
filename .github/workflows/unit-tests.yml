@@ -34,3 +34,8 @@ jobs:
         run: |
           cd first-party
           ./gradlew clean build --stacktrace
+      - name: coverage
+          uses: codecov/codecov-action@v1
+          with:
+            name: actions ${{matrix.java}}
+
